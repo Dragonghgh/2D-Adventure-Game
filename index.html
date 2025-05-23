@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2D Adventure Game</title>
+    <title>Epic 2D Adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
         <canvas id="game-canvas" width="800" height="600"></canvas>
         <div id="ui">
-            <div id="health">Health: 100%</div>
-            <div id="score">Score: 0</div>
-            <div id="inventory">Inventory: None</div>
+            <div class="ui-element">
+                <span class="icon">❤️</span>
+                <span id="health">100</span>%
+            </div>
+            <div class="ui-element">
+                <span class="icon">💰</span>
+                <span id="score">0</span>
+            </div>
+            <div class="ui-element">
+                <span class="icon">🎒</span>
+                <span id="inventory">Empty</span>
+            </div>
+            <div id="message-box"></div>
+        </div>
+        <div id="start-screen">
+            <h1>Epic Adventure</h1>
+            <button id="start-button">Start Game</button>
+            <div id="controls">
+                <h3>Controls:</h3>
+                <p>← → or A/D: Move</p>
+                <p>↑ or W or Space: Jump</p>
+                <p>F: Attack</p>
+                <p>E: Interact</p>
+                <p>P: Pause</p>
+            </div>
+        </div>
+        <div id="pause-screen" class="hidden">
+            <h1>Game Paused</h1>
+            <button id="resume-button">Resume</button>
         </div>
     </div>
     <script src="game.js"></script>
